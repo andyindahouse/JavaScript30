@@ -7,6 +7,27 @@
 </head>
 <body>
 <script>
+
+const pressed = [];
+const keysecret = 'andyrules'
+
+document.addEventListener('keyup', (e) => {
+  pressed.push(e.key);
+  pressed.splice(-keysecret.length -1, pressed.length - keysecret.length);
+  console.log(pressed);
+
+  if(pressed.join('') === keysecret){
+    alert('YOU ARE THE BOSS!');
+    cornify_add();
+  }
+
+
+  
+
+});
+
+
+
 </script>
 </body>
 </html>
