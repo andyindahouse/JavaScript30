@@ -9,6 +9,7 @@
   <div class="one">
     <div class="two">
       <div class="three">
+          <button>askdasd</button>
       </div>
     </div>
   </div>
@@ -37,8 +38,21 @@
   }
 </style>
 
-<button></button>
 <script>
+  const divs = document.querySelectorAll('div');
+  const button = document.querySelector('button');
+
+  function logText(e) {
+    console.log(this);
+  }
+
+  divs.forEach(e => e.addEventListener('click', logText, {
+    capture: false,
+    once: false
+  }));
+
+
+  button.addEventListener('click', logText);
 
 </script>
 </body>
